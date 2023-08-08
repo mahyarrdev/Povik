@@ -35,13 +35,13 @@ try:
         print(Fore.RED+30*"-")
 
         print(" ")
-        reqest = int(input(Fore.GREEN+"┌──(povik)- : "+Fore.LIGHTCYAN_EX))
+        req = int(input(Fore.GREEN+"┌──(povik)- : "+Fore.LIGHTCYAN_EX))
     #IP Public user
         def ip() :
             ip = requests.get("http://api.ipify.org/").text
             ip_location = ipapi.location(ip)['country']
         # jwt cracker
-        if reqest == 1:
+        if req == 1:
             os.system("cls")
             encoded = input(colorama.Fore.RED+" [?] " + colorama.Fore.WHITE + "Enter encoded payload:")
             wordlist = input(colorama.Fore.RED+" [?] " + colorama.Fore.WHITE + "Path to wordlist:").rstrip()
@@ -61,7 +61,7 @@ try:
                         print ("Uncaught Exception - ") + secret.rstrip()
 
     # WHOIS
-    if reqest == 2:
+    if req == 2:
         site = input(Fore.GREEN+"\n [?] "+Fore.WHITE+" Enter Target Domain : "+Fore.LIGHTCYAN_EX)
         ip = socket.gethostbyname(site)
         info = IPWhois(ip)
@@ -84,7 +84,7 @@ try:
         """)
         pprint(res)
 
-    if reqest == 3:
+    if req == 3:
         import socket,os,time
         init()
         target =  input(Fore.GREEN+"\n [?] "+Fore.WHITE+"Enter Target ip : \n ")
